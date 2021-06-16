@@ -1,9 +1,17 @@
-# SWE-Project-Repo
-Software Engineering project repository
+# SWE-Project-Repo - Software Engineering project repository
 
-To build a Web application - Graphical password authenticator:
+# Team Members:
+- Benkkallpalli Chandrashekhar, Archana
+- Saadh Ahmed
+- Saad Mahmood
+- Abrams, Kevin
+- Alston, lman
 
-#1 Multi-image recalls based authentication - User selects from images, in a specific order
-#2 Recall based authentication - Given an image in a scrambler, user moves pieces in the image, creating an ordered list that becomes the
-password
+# Task: To build a Web application - Graphical password authenticator:
+# Timeline: Jun 14, 2021 - Jul 29, 2021  
+
+# 1 Multi-image recalls based authentication - User selects from images, in a specific order
+
+# 2 Recall based authentication - Given an image in a scrambler, user moves pieces in the image, creating an ordered list that becomes the password
+
 
