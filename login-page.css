@@ -79,3 +79,32 @@ body {
   cursor: pointer;
   outline: none;
 }
+
+
+.button {
+  border: none;
+  color: white;
+  padding: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px 2px;
+}
+
+.column {
+  flex: 33%;
+  padding: 2px 2px;
+}
+
+.column img {
+  margin: 2px;
+}
