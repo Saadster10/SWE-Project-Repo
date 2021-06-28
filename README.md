@@ -5,7 +5,6 @@
 - Saadh Ahmed
 - Saad Mahmood
 - Abrams, Kevin
-- Alston, lman
 
 # Task: To build a Web application - Graphical password authenticator: 
 
