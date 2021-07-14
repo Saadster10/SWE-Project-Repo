@@ -1,3 +1,21 @@
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyCziOBzOn0M_NpghDUiKQYKk3_DDn8TcwI",
+  authDomain: "swe-graphical-password.firebaseapp.com",
+  projectId: "swe-graphical-password",
+  storageBucket: "swe-graphical-password.appspot.com",
+  messagingSenderId: "78275528816",
+  appId: "1:78275528816:web:379da07703a58460f08cb5",
+  measurementId: "G-TT0D2G4EZK"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+const auth = firebase.auth();
+
+
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
@@ -58,7 +76,47 @@ imgButton8.addEventListener("click", (e) => {
   loginString += "bike";
 })
 
+function signUp(){
+  var email = document.getElementById("email");
+  var password = loginString;
+  const promise = auth.createUserWithEmailAndPassword(email.value, password);
 
+  promise.catch(e => alert(e.message));
+  alert("Signup Successful!");
+}
+
+function signOut(){
+  auth.signOut();
+  alert("SignOut Successfully from System");
+  window.location.href = 'login-page.html';
+}
+
+function  signIn(){
+  var email = document.getElementById("email");
+  var password  = loginString;
+  const promise = auth.signInWithEmailAndPassword(email.value,password);
+  promise.catch(e=>alert(e.message));
+  
+}
+
+function reset(){
+  loginString = "";
+}
+
+//active user to homepage
+firebase.auth().onAuthStateChanged((user)=>{
+  if(user){
+    var email = user.email;
+    alert("Active user "+email);
+    location.replace("main.html");
+
+  }else{
+    //alert("No Active user Found");
+  }
+})
+
+
+/*
 // Login Button checking the current string against the password
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -76,3 +134,4 @@ loginButton.addEventListener("click", (e) => {
         loginString = "";
     }
 })
+*/
